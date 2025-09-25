@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tfactprofiler"
+version = "0.1.0"
+description = "TF activity inference, reliability estimation, and perturbation prediction."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [{name = "Hikaru Sugimoto"}]
+keywords = ["single-cell", "transcription factor", "scRNA-seq", "bioinformatics", "perturbation"]
+classifiers = [
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "License :: OSI Approved :: BSD License",
+  "Intended Audience :: Science/Research",
+  "Topic :: Scientific/Engineering :: Bio-Informatics"
+]
+
+dependencies = [
+  "numpy>=1.22",
+  "pandas>=1.5",
+  "scipy<1.16",
+  "scikit-learn>=1.1",
+  "anndata>=0.9",
+  "decoupler==2.0.4",
+  "adjusttext",
+  "docrep",
+  "marsilea",
+  "numba",
+  "requests",
+  "session-info2",
+  "scanpy",
+  "tqdm"
+]
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+packages = ["tfactprofiler"]
