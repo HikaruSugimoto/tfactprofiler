@@ -33,7 +33,10 @@ def train_W(Y: pd.DataFrame, P: pd.DataFrame, K: int=10, lambda_ridge: float = 0
     K_eff = min(K, Y_centered.shape[0], Y_centered.shape[1])
     pca = PCA(n_components=K_eff)
     G = pca.fit_transform(Y_centered)
-    
+
+    #U, S, Vt = np.linalg.svd(Y_centered, full_matrices=False)
+    #G_arr = U[:, :K_eff]                
+    #K = G_arr.shape[1]
     # Convert inputs
     K = len(pd.DataFrame(G).T)
     G_arr = G.values if isinstance(G, pd.DataFrame) else np.asarray(G)
