@@ -1,6 +1,6 @@
 Metadata-Version: 2.4
 Name: tfactprofiler
-Version: 0.1.1
+Version: 0.1.2
 Summary: TF activity inference, reliability estimation, and perturbation prediction.
 Author: Hikaru Sugimoto
 License: BSD 3-Clause License
