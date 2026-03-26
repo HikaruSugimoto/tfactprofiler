@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "tfactprofiler"
-version = "0.1.0"
+version = "0.1.1"
 description = "TF activity inference, reliability estimation, and perturbation prediction."
 readme = "README.md"
 requires-python = ">=3.10"
@@ -32,7 +32,7 @@ dependencies = [
   "adjusttext",
   "docrep",
   "marsilea",
-  "numba",
+  "numba>=0.61,<0.62",
   "requests",
   "session-info2",
   "scanpy",

@@ -7,7 +7,7 @@ decoupler==2.0.4
 adjusttext
 docrep
 marsilea
-numba
+numba<0.62,>=0.61
 requests
 session-info2
 scanpy
