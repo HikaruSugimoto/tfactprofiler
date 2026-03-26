@@ -57,6 +57,7 @@ def perturbation_predict(
     tf_names_local = [tf for tf, k in zip(tf_names, keep_tf) if k]
     x = x_full[keep_tf].values
     W_local = W.loc[:, tf_names_local]
+    W_local = W_local.div(W_local.abs().sum(axis=0).replace(0,1.0), axis=1)###
     W_np = W_local.values
 
     # safety: ensure W is finite
