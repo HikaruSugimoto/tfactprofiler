@@ -1,6 +1,8 @@
 # TFActProfiler
 
-**TFActProfiler** provides tools to infer transcription factor (TF) activities from gene expression data, assess their reliability, and simulate perturbation effects with or without additional model training.
+**TFActProfiler** provides tools to infer transcription factor (TF) activities from gene expression data, assess their reliability, and simulate perturbation effects with or without additional model training.   
+
+A web application for visualizing the TF–mRNA database and estimating TF activity from transcriptomic data (https://tfestimatetest.streamlit.app/) 
 
 ## Features
 1. **TF activity inference with reliability estimation**  
@@ -33,3 +35,6 @@ Usage examples are provided as Jupyter notebooks inside each **example** folder:
 
 ## Methods
 TFActProfiler was constructed by first assembling candidate TF–mRNA regulatory pairs from multiple prior resources, including CellOracle-base networks, ChIP-Atlas, and CollecTRI. These candidate interactions were then integrated with large-scale bulk and single-cell RNA-seq datasets, and target-gene expression was modeled as a function of TF expression using regularized regression in a cluster-wise manner to estimate signed regulatory coefficients. During coefficient estimation, putative self-activating TF→TF relationships were temporarily excluded from the regression step to avoid bias in the inferred regulatory effects. After regression and coefficient aggregation, these self-regulatory relationships were re-integrated into the final TF–mRNA interaction resource.
+
+## Citation
+Sugimoto, H., Tsuyuzaki, K., Zou, Z., Oki, S., Ohta, T., & Kawakami, E. (2025). Uncertainty-aware transcription factor activity and perturbation inference without additional training. bioRxiv, 2025-10.
